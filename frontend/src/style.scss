@@ -1,0 +1,16 @@
+@use "./style/button.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body,#root{
+    width: 100%;
+    background-color: #161616;
+    color:white;
+    font-family: 'system-ui', sans-serif;
+}
+.highlight{
+    color:#e1034d;
+}    
