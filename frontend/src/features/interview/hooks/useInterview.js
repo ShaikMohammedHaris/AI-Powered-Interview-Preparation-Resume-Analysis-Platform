@@ -2,8 +2,6 @@ import {getAllInterviewReports,generateInterviewReport,getInterviewReportById,ge
 import {useContext,useEffect} from "react"
 import {InterviewContext} from "../interview.context"
 export const useInterview = ()=>{
-
-    
     const context = useContext(InterviewContext);
     if(!context){
         throw new Error("useInterview must be used within an InterviewProvider")
@@ -39,7 +37,7 @@ export const useInterview = ()=>{
         finally{
             setLoading(false);
         }
-        return response.interviewReport;
+        return response.interviewReport|| null;
     }
     const getAllReports = async ()=>{
         setLoading(true);
@@ -84,5 +82,4 @@ export const useInterview = ()=>{
         getAllReports,
         generatePdf
     }
-
 }
